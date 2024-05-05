@@ -9,7 +9,6 @@ import base64
 app = Flask(__name__)
 
 def generate_random_string(length=10):
-    # Generate a random string using Qiskit's quantum random number generator
     qrng = Aer.get_backend('qasm_simulator')
     qc = QuantumCircuit(5, 5)
     qc.h(range(5))
